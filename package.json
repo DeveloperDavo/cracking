@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
+}
