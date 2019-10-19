@@ -3,3 +3,11 @@
 My solutions for [Cracking the Coding Interview](http://www.crackingthecodinginterview.com/)
 
 Under `to-implement.md` I have added some notes for problems that I would like to come back to.
+
+## Set up
+
+- `npm install`
+
+## Run tests in watch mode
+
+- `npm test`
