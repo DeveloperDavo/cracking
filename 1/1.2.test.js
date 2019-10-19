@@ -7,4 +7,6 @@ test('test', () => {
   expect(checkPermutation('', '')).toEqual(true)
   expect(checkPermutation('ab', 'ba')).toEqual(true)
   expect(checkPermutation('ba', 'ab')).toEqual(true)
+  expect(checkPermutation('bba', 'bab')).toEqual(true)
+  expect(checkPermutation('baa', 'bab')).toEqual(false)
 })
