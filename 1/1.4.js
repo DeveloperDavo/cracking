@@ -7,21 +7,14 @@ function isEven(num) {
 // - ignore spaces
 // - Unicode
 export function isPalindromePermutation(str) {
-  const hashMap = {}
+  const set = new Set()
   for (let i = 0; i < str.length; i++) {
     const char = str[i].toLowerCase()
     if (char !== ' ') {
-      if (hashMap[char]) hashMap[char]++
-      else hashMap[char] = 1
+      if (set.has(char)) set.delete(char)
+      else set.add(char)
     }
   }
 
-  const values = Object.values(hashMap)
-  let oddCount = 0
-  for (let i = 0; i < values.length; i++) {
-    if (!isEven(values[i])) oddCount++
-    if (oddCount > 1) return false
-  }
-
-  return true
+  return set.size <= 1
 }
