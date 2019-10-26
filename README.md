@@ -12,4 +12,4 @@ My solutions for [Cracking the Coding Interview](http://www.crackingthecodingint
 
 ## Miscellaneous
 
-Under `to-revist.md` I have added some notes for problems that I would like to come back to.
+Under `to-revist.md` (**contains spoilers**) I have added some notes for problems that I would like to come back to.
