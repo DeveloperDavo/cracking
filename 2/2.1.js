@@ -16,3 +16,28 @@ export function removeDups(ll) {
   }
   return ll
 }
+
+function hasDuplicate(ll, el) {
+  let searchEl = ll.head
+  while (searchEl.next && searchEl !== el) {
+    if (searchEl.next.value === el.next.value) {
+      return true
+    }
+    searchEl = searchEl.next
+  }
+  return false
+}
+
+export function removeDupsWithNoExtraSpace(ll) {
+  let el = ll.head
+  if (el) {
+    while (el.next) {
+      if (hasDuplicate(ll, el)) {
+        el.next = el.next.next
+      } else {
+        el = el.next
+      }
+    }
+  }
+  return ll
+}

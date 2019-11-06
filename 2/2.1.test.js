@@ -1,4 +1,4 @@
-import { removeDups } from './2.1'
+import { removeDups, removeDupsWithNoExtraSpace } from './2.1'
 import LinkedList, { Element } from '../data-structures/LinkedList'
 
 test('duplicates', () => {
@@ -14,6 +14,7 @@ test('duplicates', () => {
   expected.append(new Element(5))
 
   expect(removeDups(numbers)).toEqual(expected)
+  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
 })
 
 test('empty', () => {
@@ -22,6 +23,7 @@ test('empty', () => {
   const expected = new LinkedList()
 
   expect(removeDups(numbers)).toEqual(expected)
+  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
 })
 
 test('one element', () => {
@@ -30,6 +32,7 @@ test('one element', () => {
   const expected = new LinkedList(new Element(1))
 
   expect(removeDups(numbers)).toEqual(expected)
+  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
 })
 
 test('no duplicates', () => {
@@ -44,6 +47,7 @@ test('no duplicates', () => {
   expected.append(new Element(5))
 
   expect(removeDups(numbers)).toEqual(expected)
+  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
 })
 
 test('multiple duplicates', () => {
@@ -59,6 +63,7 @@ test('multiple duplicates', () => {
   expected.append(new Element(5))
 
   expect(removeDups(numbers)).toEqual(expected)
+  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
 })
 
 test('duplicate in head', () => {
@@ -72,4 +77,5 @@ test('duplicate in head', () => {
   expected.append(new Element(5))
 
   expect(removeDups(numbers)).toEqual(expected)
+  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
 })
