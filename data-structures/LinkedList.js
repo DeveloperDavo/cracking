@@ -19,7 +19,7 @@ export default class LinkedList {
     el.next = newEl
   }
 
-  delete(value) {
+  deleteFirstNodeWith(value) {
     let el = this.head
     while (el.next && el.next.value !== value) {
       el = el.next

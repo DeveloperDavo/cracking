@@ -17,7 +17,7 @@ describe('LinkedList', () => {
     numbers.append(new Element(7))
     numbers.append(new Element(3))
 
-    numbers.delete(7)
+    numbers.deleteFirstNodeWith(7)
 
     expect(numbers.head.value).toBe(1)
     expect(numbers.head.next.value).toBe(3)
