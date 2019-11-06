@@ -12,6 +12,13 @@ describe('LinkedList', () => {
     expect(numbers.head.next.next.next).toBe(null)
   })
 
+  it('handles no head', () => {
+    const numbers = new LinkedList()
+    numbers.append(new Element(7))
+
+    expect(numbers.head.value).toBe(7)
+  })
+
   it('deletes', () => {
     const numbers = new LinkedList(new Element(1))
     numbers.append(new Element(7))

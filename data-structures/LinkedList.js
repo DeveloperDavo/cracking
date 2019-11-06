@@ -12,11 +12,15 @@ export default class LinkedList {
 
   append(newEl) {
     let el = this.head
-    while (el.next) {
-      el = el.next
-    }
+    if (!el) {
+      this.head = newEl
+    } else {
+      while (el.next) {
+        el = el.next
+      }
 
-    el.next = newEl
+      el.next = newEl
+    }
   }
 
   deleteFirstNodeWith(value) {
