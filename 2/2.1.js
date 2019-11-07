@@ -1,7 +1,7 @@
 // Assumptions
 // - first occurrence is kept
-export function removeDups(ll) {
-  let el = ll.head
+export function removeDups(head) {
+  let el = head
   const set = new Set()
   if (el) {
     set.add(el.value)
@@ -14,11 +14,11 @@ export function removeDups(ll) {
       }
     }
   }
-  return ll
+  return head
 }
 
-function hasDuplicate(ll, el) {
-  let searchEl = ll.head
+function hasDuplicate(head, el) {
+  let searchEl = head
   while (searchEl.next && searchEl !== el) {
     if (searchEl.next.value === el.next.value) {
       return true
@@ -28,16 +28,16 @@ function hasDuplicate(ll, el) {
   return false
 }
 
-export function removeDupsWithNoExtraSpace(ll) {
-  let el = ll.head
+export function removeDupsWithNoExtraSpace(head) {
+  let el = head
   if (el) {
     while (el.next) {
-      if (hasDuplicate(ll, el)) {
+      if (hasDuplicate(head, el)) {
         el.next = el.next.next
       } else {
         el = el.next
       }
     }
   }
-  return ll
+  return head
 }

@@ -13,8 +13,8 @@ test('duplicates', () => {
   expected.append(new Element(3))
   expected.append(new Element(5))
 
-  expect(removeDups(numbers)).toEqual(expected)
-  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
+  expect(removeDups(numbers.head)).toEqual(expected.head)
+  expect(removeDupsWithNoExtraSpace(numbers.head)).toEqual(expected.head)
 })
 
 test('empty', () => {
@@ -22,8 +22,8 @@ test('empty', () => {
 
   const expected = new LinkedList()
 
-  expect(removeDups(numbers)).toEqual(expected)
-  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
+  expect(removeDups(numbers.head)).toEqual(expected.head)
+  expect(removeDupsWithNoExtraSpace(numbers.head)).toEqual(expected.head)
 })
 
 test('one element', () => {
@@ -31,8 +31,8 @@ test('one element', () => {
 
   const expected = new LinkedList(new Element(1))
 
-  expect(removeDups(numbers)).toEqual(expected)
-  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
+  expect(removeDups(numbers.head)).toEqual(expected.head)
+  expect(removeDupsWithNoExtraSpace(numbers.head)).toEqual(expected.head)
 })
 
 test('no duplicates', () => {
@@ -46,8 +46,8 @@ test('no duplicates', () => {
   expected.append(new Element(7))
   expected.append(new Element(5))
 
-  expect(removeDups(numbers)).toEqual(expected)
-  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
+  expect(removeDups(numbers.head)).toEqual(expected.head)
+  expect(removeDupsWithNoExtraSpace(numbers.head)).toEqual(expected.head)
 })
 
 test('multiple duplicates', () => {
@@ -62,8 +62,8 @@ test('multiple duplicates', () => {
   expected.append(new Element(7))
   expected.append(new Element(5))
 
-  expect(removeDups(numbers)).toEqual(expected)
-  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
+  expect(removeDups(numbers.head)).toEqual(expected.head)
+  expect(removeDupsWithNoExtraSpace(numbers.head)).toEqual(expected.head)
 })
 
 test('duplicate in head', () => {
@@ -76,6 +76,6 @@ test('duplicate in head', () => {
   expected.append(new Element(3))
   expected.append(new Element(5))
 
-  expect(removeDups(numbers)).toEqual(expected)
-  expect(removeDupsWithNoExtraSpace(numbers)).toEqual(expected)
+  expect(removeDups(numbers.head)).toEqual(expected.head)
+  expect(removeDupsWithNoExtraSpace(numbers.head)).toEqual(expected.head)
 })
