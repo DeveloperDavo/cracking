@@ -3,10 +3,6 @@
 // - k = 1 is the last element
 // - null if k is out of bounds
 export function kthToLast(head, k) {
-  if (!head) {
-    return null
-  }
-
   let p1 = head
   let p2 = head
   for (let i = 0; i < k; i++) {
