@@ -7,20 +7,17 @@ export function kthToLast(head, k) {
     return null
   }
 
-  let lastI = 0
-  let fastPointer = head
-  let slowPointer = head
-  while (fastPointer.next) {
-    lastI++
-    fastPointer = fastPointer.next
-    if (k <= lastI) {
-      slowPointer = slowPointer.next
-    }
+  let p1 = head
+  let p2 = head
+  for (let i = 0; i < k; i++) {
+    if (!p1) return null
+    p1 = p1.next
   }
 
-  if (k > lastI + 1) {
-    return null
+  while (p1 !== null) {
+    p1 = p1.next
+    p2 = p2.next
   }
 
-  return slowPointer
+  return p2
 }

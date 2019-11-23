@@ -9,6 +9,13 @@ test('test', () => {
   expect(kthToLast(head, 1).value).toBe(3)
   expect(kthToLast(head, 2).value).toBe(2)
   expect(kthToLast(head, 3).value).toBe(1)
+})
+
+test('out of bounds', () => {
+  const head = new Element(1)
+  head.next = new Element(2)
+  head.next.next = new Element(3)
+
   expect(kthToLast(head, 4)).toBe(null)
 })
 
