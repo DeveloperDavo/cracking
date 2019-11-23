@@ -1,6 +1,6 @@
 // Assumptions
 // - k is an int
-// - k = 0 is the last element
+// - k = 1 is the last element
 // - null if k is out of bounds
 export function kthToLast(head, k) {
   if (!head) {
