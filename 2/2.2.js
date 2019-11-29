@@ -17,3 +17,23 @@ export function kthToLast(head, k) {
 
   return p2
 }
+
+export function kthToLastRecursive(head, k) {
+  return _kthToLastRecursive(head, k).head
+}
+
+function _kthToLastRecursive(head, k) {
+  if (head === null) {
+    return { counter: 0, head }
+  }
+
+  const node = _kthToLastRecursive(head.next, k)
+
+  const counter = node.counter + 1
+
+  if (counter === k) {
+    return { counter, head }
+  }
+
+  return { counter, head: node.head }
+}
